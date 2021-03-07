@@ -6,10 +6,6 @@ output "backup_bucket" {
   value = aws_s3_bucket.bucket.id
 }
 
-output "domain" {
-  value = "https://${aws_route53_record.bw.name}"
-}
-
 output "admin_token" {
   value = random_password.admin_token.result
 }

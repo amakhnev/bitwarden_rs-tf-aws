@@ -104,10 +104,3 @@ resource "aws_eip" "ip" {
   )
 }
 
-resource "aws_route53_record" "bw" {
-  zone_id = var.hosted_zone_id
-  name    = var.domain
-  type    = "A"
-  ttl     = "300"
-  records = [aws_eip.ip.public_ip]
-}

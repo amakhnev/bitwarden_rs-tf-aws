@@ -1,6 +1,5 @@
 variable "region" {
   type    = string
-  default = "us-west-2"
 }
 
 variable "vpc_cidr" {
@@ -62,10 +61,6 @@ variable "bitwarden_enable_admin_page" {
   type = bool
 }
 
-variable "hosted_zone_id" {
-  type      = string
-  sensitive = true
-}
 
 variable "domain" {
   type = string
